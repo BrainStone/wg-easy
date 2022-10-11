@@ -5,6 +5,7 @@ const { release } = require('./package.json');
 module.exports.USE_SUDO = process.env.USE_SUDO || (process.getuid() !== 0);
 module.exports.SUDO_STRING = module.exports.USE_SUDO ? 'sudo ' : '';
 module.exports.RELEASE = release;
+module.exports.LISTEN_IP = process.env.LISTEN_IP || '0.0.0.0';
 module.exports.PORT = process.env.PORT || 51821;
 module.exports.PASSWORD = process.env.PASSWORD;
 module.exports.WG_PATH = process.env.WG_PATH || '/etc/wireguard/';
